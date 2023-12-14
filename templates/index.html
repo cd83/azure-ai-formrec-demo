@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document Classifier</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <script src="/static/script.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>Classify PDF document as either Resume or Invoice</h1>
+        <p>This app uses a Custom Classification Model in Azure AI Form Recognizer to determine if any uploaded PDF file is a Resume or an Invoice.</p>
+    </div>
+    <div id="upload-container">
+        <input type="file" id="fileInput" hidden accept=".pdf" />
+        <div id="dropArea" onclick="document.getElementById('fileInput').click();">
+            Click to select a file, then click "Classify"
+        </div>
+        <button onclick="uploadFile()">Classify</button>
+    </div>
+    <div id="loading" style="display: none;">Processing...</div>
+    <div id="results"></div> 
+</body>
+</html>
